@@ -255,3 +255,16 @@ catch(SQLException | HeadlessException ex)
 {
 JOptionPane.showMessageDialog(null,ex);
 }
+
+/THE LOGOUT BUTTON/
+ public static void main(String[] args) {
+        JFrame myframe=new JFrame("Logout button")
+        JPanel mypanel=new JPanel(new FlowLayouut);
+        JButton Logout=new JButton("logout");
+        JButton Exit=new JButton("EXIT");
+        mypanel.add(Login);
+        mypanel.add(Exit);
+        myframe.add(mypanel);
+        myframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        myframe.setVisible(true);
+      
