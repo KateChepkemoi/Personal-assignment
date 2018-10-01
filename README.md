@@ -232,3 +232,26 @@ public class mainclass {
     CC.setVisible(true);
 }
 }
+
+/THE LOGIN FORM CODE/
+String sql="select * from login where username=? and password=?";
+try{
+con = DriverManager.getConnection("jdbc:mysql://localhost/testsql","root","");
+pst=con.prepareStatement(sql);
+pst.setString(1, user.getText());
+pst.setString(2,pass.getText());
+rs=pst.executeQuery();
+if(rs.next())
+{
+JOptionPane.showMessageDialog(null,"username and password matched");
+ 
+}
+else
+{
+JOptionPane.showMessageDialog(null, "username and password do not matched");
+}
+}
+catch(SQLException | HeadlessException ex)
+{
+JOptionPane.showMessageDialog(null,ex);
+}
